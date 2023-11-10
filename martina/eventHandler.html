@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS</title>
+    <style>
+         body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f1f1f1;
+    }
+
+    .image-container {
+      width: 300px;
+      height: 300px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 8px;
+    }
+    .center {
+        display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 20px;
+          
+          
+        }
+     #singa{
+            background-color:chocolate;
+            padding: 10px;
+            margin: 15px;
+            border-radius: 20px;
+            width: 150px;
+      height: 50px;
+            
+        }
+        #gajah{
+            background-color: rgb(170, 172, 166);
+            padding: 10px;
+            margin: 15px;
+            border-radius: 20px;
+            width: 150px;
+      height: 50px;
+            
+        }
+        #Hiu{
+            background-color: rgb(37, 61, 180);
+            padding: 10px;
+            margin: 15px;
+            border-radius: 20px;
+            width: 150px;
+      height: 50px;            
+        }
+        #zebra {
+            background-color: rgb(216, 29, 200);
+            padding: 10px;
+            margin: 15px;
+            border-radius: 20px;
+            width: 150px;
+      height: 50px;
+        }
+      </style>
+</head>
+<body> 
+    <script src="event.js"></script>
+    <div class="image-container">
+        <img id="animalImage" src="lion.png" alt="Animal Image">
+      </div>
+    <div class="center">
+        <button id="singa" class="animal-button" onclick="showAnimalImage('singa')"> SINGA </button>
+        <button id="gajah" class="animal-button" onclick="showAnimalImage('gajah')"> GAJAH</button>
+        <button id="Hiu" class="animal-button" onclick="showAnimalImage('hiu')"> HIU</button>
+        <button id="zebra" class="animal-button" onclick="showAnimalImage('zebra')">Zebra</button>
+    </div>
+    <script>
+
+ function showAnimalImage(animal) {
+      var image = document.getElementById("animalImage");
+      var imagePath = "";
+
+      switch (animal) {
+        case "singa":
+          imagePath = "lion.png";
+          break;
+        case "gajah":
+          imagePath = "elephant.png";
+          break;
+        case "hiu":
+          imagePath = "shark.png";
+          break;
+        case "zebra":
+          imagePath = "zebra.png";
+          break;
+        default:
+          imagePath = "";
+          break;
+      }
+
+      image.src = imagePath;
+    }
+      </script>
+
+    
+</body>
+</html>
